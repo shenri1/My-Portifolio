@@ -1,0 +1,261 @@
+<nav id="navbar">
+  <div class="nav-inner">
+    <span class="nav-logo">SH</span>
+
+    <div class="nav-links nav-links-desktop">
+      <a href="#experience" data-key="nav.experience">Experience</a>
+      <a href="#skills" data-key="nav.skills">Skills</a>
+      <a href="#projects" data-key="nav.projects">Projects</a>
+      <a href="#contact" data-key="nav.contact">Contact</a>
+
+      <div class="nav-controls">
+        <button id="themeToggle" aria-label="Toggle theme">
+          <svg id="sunIcon" viewBox="0 0 24 24" width="18" height="18">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg
+            id="moonIcon"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            style="display: none"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+
+        <button id="langToggle">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path
+              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+            />
+          </svg>
+          <span id="langLabel">EN</span>
+        </button>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 0.5rem">
+      <button
+        class="hamburger mobile-theme-btn"
+        id="mobileTheme"
+        aria-label="Toggle theme"
+      >
+        <svg id="sunIconM" viewBox="0 0 24 24" width="18" height="18">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg
+          id="moonIconM"
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+          style="display: none"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+      <button class="hamburger" id="menuToggle" aria-label="Open menu">
+        <svg id="menuOpen" viewBox="0 0 24 24" width="20" height="20">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        <svg
+          id="menuClose"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          style="display: none"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#experience" data-key="nav.experience" class="mobile-link"
+      >Experience</a
+    >
+    <a href="#skills" data-key="nav.skills" class="mobile-link">Skills</a>
+    <a href="#projects" data-key="nav.projects" class="mobile-link"
+      >Projects</a
+    >
+    <a href="#contact" data-key="nav.contact" class="mobile-link">Contact</a>
+    <button
+      id="mobileLang"
+      style="
+        color: var(--text-secondary);
+        font-family: var(--font-mono);
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      "
+    >
+      <svg viewBox="0 0 24 24" width="18" height="18">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <path
+          d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+        />
+      </svg>
+      <span id="mobileLangLabel">EN</span>
+    </button>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    transition:
+      background 0.3s,
+      border 0.3s,
+      backdrop-filter 0.3s;
+  }
+
+  nav.scrolled {
+    background-color: color-mix(in srgb, var(--bg-primary), transparent 20%);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent), transparent 80%);
+  }
+
+  .nav-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: var(--font-mono);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid color-mix(in srgb, var(--accent), transparent 80%);
+  }
+
+  .nav-controls button {
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+  .nav-controls button:hover {
+    color: var(--accent);
+  }
+
+  .hamburger {
+    display: none;
+    color: var(--text-secondary);
+    padding: 0.5rem;
+  }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent), transparent 80%);
+    overflow: hidden;
+    max-height: 0;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.3s;
+    opacity: 0;
+  }
+  .mobile-nav.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+  .mobile-nav a {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--text-secondary);
+  }
+  .mobile-nav button {
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links-desktop {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .mobile-nav {
+      display: flex;
+    }
+  }
+  @media (min-width: 769px) {
+    .mobile-theme-btn {
+      display: none;
+    }
+  }
+</style>

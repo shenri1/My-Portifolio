@@ -1,0 +1,94 @@
+<section id="skills">
+  <div class="section-inner">
+    <h2 class="section-heading" data-key="skills.title">
+      Capabilities
+    </h2>
+    <div class="skills-grid">
+      <div class="reveal">
+        <h3 class="skill-group-title">Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Rust</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 class="skill-group-title">Frameworks</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">Spring</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 class="skill-group-title">Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 8rem 1.5rem;
+  }
+
+  .section-heading {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--text-secondary);
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+  @media (min-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .skill-group-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .skill-tag {
+    padding: 0.5rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--text-primary), transparent 90%);
+    border-radius: 0.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background-color: color-mix(in srgb, var(--bg-secondary), transparent 95%);
+    transition:
+      color 0.2s,
+      border-color 0.2s;
+    cursor: default;
+  }
+  .skill-tag:hover {
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent), transparent 60%);
+  }
+</style>
