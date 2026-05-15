@@ -1,54 +1,4 @@
-const translations = {
-  en: {
-    "nav.experience": "Experience",
-    "nav.skills": "Skills",
-    "nav.projects": "Projects",
-    "nav.contact": "Contact",
-    "hero.status": "Active System",
-    "hero.subtitle":
-      "Full-stack developer focused on creating scalable software solutions and high-performance digital experiences.",
-    "experience.work": "Experience",
-    "experience.edu": "Education",
-    "skills.title": "Capabilities",
-    "projects.title": "Projects",
-    "contact.title": "Connect",
-    "contact.email": "Electronic Mail",
-    "contact.resume": "Resume Archive",
-    footer: "ALL RIGHTS RESERVED",
-  },
-  pt: {
-    "nav.experience": "Experiência",
-    "nav.skills": "Habilidades",
-    "nav.projects": "Projetos",
-    "nav.contact": "Contato",
-    "hero.status": "Sistema Ativo",
-    "hero.subtitle":
-      "Desenvolvedor full-stack focado em criar soluções de software escaláveis e experiências digitais de alta performance.",
-    "experience.work": "Experiência",
-    "experience.edu": "Educação",
-    "skills.title": "Capacidades",
-    "projects.title": "Projetos",
-    "contact.title": "Conectar",
-    "contact.email": "Correio Eletrônico",
-    "contact.resume": "Arquivo de Currículos",
-    footer: "TODOS OS DIREITOS RESERVADOS",
-  },
-};
-
-let lang = "en";
 let theme = "dark";
-
-function applyLang() {
-  document.querySelectorAll("[data-key]").forEach((el) => {
-    const key = el.getAttribute("data-key");
-    if (translations[lang][key]) el.textContent = translations[lang][key];
-  });
-  document.documentElement.lang = lang;
-  const langLabel = document.getElementById("langLabel");
-  const mobileLangLabel = document.getElementById("mobileLangLabel");
-  if (langLabel) langLabel.textContent = lang.toUpperCase();
-  if (mobileLangLabel) mobileLangLabel.textContent = lang.toUpperCase();
-}
 
 function applyTheme() {
   if (theme === "light") {
@@ -72,21 +22,12 @@ function toggleTheme() {
   applyTheme();
 }
 
-function toggleLang() {
-  lang = lang === "en" ? "pt" : "en";
-  applyLang();
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("themeToggle");
   const mobileTheme = document.getElementById("mobileTheme");
-  const langToggle = document.getElementById("langToggle");
-  const mobileLang = document.getElementById("mobileLang");
 
   if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
   if (mobileTheme) mobileTheme.addEventListener("click", toggleTheme);
-  if (langToggle) langToggle.addEventListener("click", toggleLang);
-  if (mobileLang) mobileLang.addEventListener("click", () => { toggleLang(); closeMobileMenu(); });
 
   const mobileNav = document.getElementById("mobileNav");
   const menuToggle = document.getElementById("menuToggle");
@@ -139,6 +80,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-  applyLang();
   applyTheme();
 });

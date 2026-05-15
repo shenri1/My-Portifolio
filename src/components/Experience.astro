@@ -1,131 +1,113 @@
 <section id="experience" class="section-alt">
-    <div class="section-inner">
-        <div class="exp-grid">
-            <div class="reveal">
-                <h3 class="section-heading" data-key="experience.work">
-                    Experience
-                </h3>
-                <div>
-                    <div class="exp-item">
-                        <span class="exp-period">March 2025 - current</span>
-                        <h4 class="exp-role">Intern</h4>
-                        <p class="exp-company">Grupo Equatorial</p>
-                        <p class="exp-desc">
-                            - Refactored an internal web system for the legal
-                            department using clean architecture, improving the
-                            maintainability and scalability of the code.
-                        </p>
-                        <p class="exp-desc">
-                            - Developed interactive dashboards with Power BI to
-                            support data-driven decision making.
-                        </p>
-                        <p class="exp-desc">
-                            - Assisted other departments and management by
-                            creating automated processes that previously
-                            required manual work, reducing delays and
-                            facilitating corrections.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="reveal">
-                <h3 class="section-heading" data-key="experience.edu">
-                    Education
-                </h3>
-                <div>
-                    <div class="exp-item">
-                        <span class="exp-period">2021 - 2027</span>
-                        <h4 class="exp-role">B.S. Computer Engineering</h4>
-                        <p class="exp-company">
-                            Universidade Estadual do Maranhão
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="section-inner">
+    <div class="exp-grid">
+      <div class="reveal">
+        <h3 class="section-heading">Experience</h3>
+        <div>
+          <div class="exp-item">
+            <span class="exp-period">March 2025 - current</span>
+            <h4 class="exp-role">Intern</h4>
+            <p class="exp-company">Grupo Equatorial</p>
+            <p class="exp-desc">
+              Refactored an internal web system for the legal department using clean architecture, improving the maintainability and scalability of the code.
+            </p>
+            <p class="exp-desc">
+              Developed interactive dashboards with Power BI to support data-driven decision making.
+            </p>
+            <p class="exp-desc">
+              Assisted other departments and management by creating automated processes that previously required manual work, reducing delays and facilitating corrections.
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div class="reveal">
+        <h3 class="section-heading">Education</h3>
+        <div>
+          <div class="exp-item">
+            <span class="exp-period">2021 - 2027</span>
+            <h4 class="exp-role">B.S. Computer Engineering</h4>
+            <p class="exp-company">Universidade Estadual do Maranhão</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <style>
-    .section-alt {
-        background-color: color-mix(
-            in srgb,
-            var(--bg-secondary),
-            transparent 95%
-        );
-        border-top: 1px solid
-            color-mix(in srgb, var(--text-primary), transparent 95%);
-        border-bottom: 1px solid
-            color-mix(in srgb, var(--text-primary), transparent 95%);
-    }
+  .section-alt {
+    background-color: color-mix(in srgb, var(--bg-secondary), transparent 95%);
+    border-top: 1px solid color-mix(in srgb, var(--text-primary), transparent 95%);
+    border-bottom: 1px solid color-mix(in srgb, var(--text-primary), transparent 95%);
+  }
 
-    .section-inner {
-        max-width: 80rem;
-        margin: 0 auto;
-        padding: 8rem 1.5rem;
-    }
+  .section-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 8rem 1.5rem;
+  }
 
-    .section-heading {
-        font-family: var(--font-mono);
-        font-size: 0.625rem;
-        text-transform: uppercase;
-        letter-spacing: 0.4em;
-        color: var(--text-secondary);
-        border-left: 2px solid var(--accent);
-        padding-left: 1rem;
-        margin-bottom: 4rem;
-    }
+  .section-heading {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--text-secondary);
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+    margin-bottom: 4rem;
+  }
 
+  .exp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+  @media (min-width: 1024px) {
     .exp-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 6rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
     }
-    @media (min-width: 1024px) {
-        .exp-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-        }
-    }
+  }
 
-    .exp-item {
-        margin-bottom: 4rem;
-    }
-    .exp-item:last-child {
-        margin-bottom: 0;
-    }
+  .exp-item {
+    margin-bottom: 4rem;
+  }
+  .exp-item:last-child {
+    margin-bottom: 0;
+  }
 
-    .exp-period {
-        font-family: var(--font-mono);
-        font-size: 0.625rem;
-        color: var(--text-secondary);
-        opacity: 0.5;
-        display: block;
-        margin-bottom: 0.5rem;
-    }
+  .exp-period {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
 
-    .exp-role {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-    }
+  .exp-role {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
 
-    .exp-company {
-        font-family: var(--font-mono);
-        font-size: 0.625rem;
-        color: var(--accent);
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        margin-bottom: 1rem;
-    }
+  .exp-company {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
 
-    .exp-desc {
-        color: var(--text-secondary);
-        font-size: 0.875rem;
-        line-height: 1.75;
-        font-weight: 300;
-        opacity: 0.8;
-        max-width: 32rem;
-    }
+  .exp-desc {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.75;
+    font-weight: 300;
+    opacity: 0.8;
+    max-width: 32rem;
+  }
 </style>
