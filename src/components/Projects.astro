@@ -1,6 +1,6 @@
 <section id="projects" class="section-alt">
   <div class="section-inner">
-    <h2 class="section-heading">Projects</h2>
+    <div class="section-label">// 04. PROJECTS</div>
     <div class="projects-grid">
       <a href="https://github.com/shenri1/Beret" target="_blank" rel="noopener noreferrer" class="project-card reveal">
         <div class="project-title-row">
@@ -41,33 +41,22 @@
 
 <style>
   .section-alt {
-    background-color: color-mix(in srgb, var(--bg-secondary), transparent 95%);
-    border-top: 1px solid color-mix(in srgb, var(--text-primary), transparent 95%);
-    border-bottom: 1px solid color-mix(in srgb, var(--text-primary), transparent 95%);
+    background-color: color-mix(in srgb, var(--bg-secondary) 50%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--text-muted), transparent 92%);
+    border-bottom: 1px solid color-mix(in srgb, var(--text-muted), transparent 92%);
   }
 
   .section-inner {
-    max-width: 80rem;
+    max-width: 75rem;
     margin: 0 auto;
-    padding: 8rem 1.5rem;
-  }
-
-  .section-heading {
-    font-family: var(--font-mono);
-    font-size: 0.625rem;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    color: var(--text-secondary);
-    border-left: 2px solid var(--accent);
-    padding-left: 1rem;
-    margin-bottom: 4rem;
+    padding: var(--space-section) var(--space-lg);
   }
 
   .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
-    max-width: 52rem;
+    gap: var(--space-lg);
+    max-width: 48rem;
     margin: 0 auto;
   }
   @media (min-width: 768px) {
@@ -79,29 +68,31 @@
   .project-card {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    border: 1px solid color-mix(in srgb, var(--text-primary), transparent 90%);
-    border-radius: 0.25rem;
-    background-color: color-mix(in srgb, var(--bg-secondary), transparent 95%);
+    padding: var(--space-lg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-secondary);
     transition:
-      border-color 0.2s,
-      background-color 0.2s;
+      border-color 0.3s,
+      box-shadow 0.3s;
   }
   .project-card:hover {
-    border-color: color-mix(in srgb, var(--accent), transparent 60%);
-    background-color: color-mix(in srgb, var(--bg-secondary), transparent 90%);
+    border-color: color-mix(in srgb, var(--accent), transparent 50%);
+    box-shadow: 0 0 32px var(--accent-glow);
   }
 
   .project-title-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
   }
 
   .project-title {
+    font-family: var(--font-sans);
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
+    line-height: 1.4;
     transition: color 0.2s;
   }
   .project-card:hover .project-title {
@@ -109,9 +100,10 @@
   }
 
   .project-icon {
-    color: var(--text-secondary);
-    opacity: 0.3;
+    color: var(--text-muted);
+    opacity: 0.4;
     transition: opacity 0.2s;
+    flex-shrink: 0;
   }
   .project-card:hover .project-icon {
     opacity: 1;
@@ -119,26 +111,24 @@
 
   .project-desc {
     color: var(--text-secondary);
-    font-size: 0.875rem;
-    line-height: 1.75;
-    font-weight: 300;
-    opacity: 0.8;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: var(--space-lg);
   }
 
   .project-tags {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-md);
     margin-top: auto;
   }
 
   .project-tag {
     font-family: var(--font-mono);
-    font-size: 0.625rem;
-    color: var(--text-secondary);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.4;
+    font-size: 0.6875rem;
     font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-transform: uppercase;
   }
 </style>

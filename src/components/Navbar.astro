@@ -95,6 +95,9 @@
     top: 0;
     width: 100%;
     z-index: 50;
+    background-color: color-mix(in srgb, var(--bg-base) 85%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     transition:
       background 0.3s,
       border 0.3s,
@@ -102,15 +105,16 @@
   }
 
   nav.scrolled {
-    background-color: color-mix(in srgb, var(--bg-primary), transparent 20%);
+    background-color: color-mix(in srgb, var(--bg-secondary) 90%, transparent);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid color-mix(in srgb, var(--accent), transparent 80%);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent), transparent 85%);
   }
 
   .nav-inner {
-    max-width: 80rem;
+    max-width: 75rem;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 var(--space-lg);
     height: 4rem;
     display: flex;
     align-items: center;
@@ -122,18 +126,20 @@
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--accent);
+    letter-spacing: -0.02em;
   }
 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: var(--space-xl);
   }
 
   .nav-links a {
     font-family: var(--font-mono);
-    font-size: 0.625rem;
-    letter-spacing: 0.4em;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--text-secondary);
     transition: color 0.2s;
@@ -145,9 +151,8 @@
   .nav-controls {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding-left: 1rem;
-    border-left: 1px solid color-mix(in srgb, var(--accent), transparent 80%);
+    padding-left: var(--space-lg);
+    border-left: 1px solid color-mix(in srgb, var(--text-muted), transparent 80%);
   }
 
   .nav-controls button {
@@ -156,10 +161,6 @@
     transition: color 0.2s;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
   }
   .nav-controls button:hover {
     color: var(--accent);
@@ -174,10 +175,10 @@
   .mobile-nav {
     display: none;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
+    gap: var(--space-lg);
+    padding: var(--space-xl) var(--space-lg);
     background-color: var(--bg-secondary);
-    border-bottom: 1px solid color-mix(in srgb, var(--accent), transparent 80%);
+    border-bottom: 1px solid color-mix(in srgb, var(--text-muted), transparent 85%);
     overflow: hidden;
     max-height: 0;
     transition:
@@ -186,14 +187,15 @@
     opacity: 0;
   }
   .mobile-nav.open {
-    max-height: 500px;
+    max-height: 400px;
     opacity: 1;
   }
   .mobile-nav a {
     font-family: var(--font-mono);
     font-size: 0.875rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.08em;
     color: var(--text-secondary);
   }
 
