@@ -1,4 +1,6 @@
-let theme = "dark";
+let theme =
+  localStorage.getItem("theme") ||
+  (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
 
 function applyTheme() {
   if (theme === "light") {
@@ -6,6 +8,7 @@ function applyTheme() {
   } else {
     document.documentElement.classList.remove("light");
   }
+  localStorage.setItem("theme", theme);
   const isDark = theme === "dark";
   const sunIcon = document.getElementById("sunIcon");
   const moonIcon = document.getElementById("moonIcon");
@@ -21,6 +24,8 @@ function toggleTheme() {
   theme = theme === "dark" ? "light" : "dark";
   applyTheme();
 }
+
+applyTheme();
 
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("themeToggle");
@@ -79,6 +84,4 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-  applyTheme();
 });
