@@ -1,7 +1,7 @@
 {
-  "name": "myportifolio",
+  "name": "portifolio_silas_cerqueira",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -12,6 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.3.3"
+    "@tsparticles/engine": "^4.3.1",
+    "@tsparticles/slim": "^4.3.1",
+    "astro": "^6.3.3",
+    "typed.js": "^3.0.0"
   }
 }

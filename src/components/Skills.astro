@@ -1,84 +1,113 @@
 <section id="skills">
-  <div class="section-inner">
-    <div class="section-label">// 03. CAPABILITIES</div>
-    <div class="skills-grid">
-      <div class="reveal">
-        <h3 class="skill-group-title">Languages</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">C</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Rust</span>
+    <div class="section-inner">
+        <div class="section-label">// 03. CAPABILITIES</div>
+
+        <div class="code-card reveal">
+            <div class="code-tab">
+                <span class="code-filename">skills.json</span>
+            </div>
+            <div class="code-body">
+                <ol class="code-lines">
+                    <li><span class="punct">&#123;</span></li>
+                    <li>
+                        &nbsp;&nbsp;<span class="key">"languages"</span><span
+                            class="punct">:</span
+                        >
+                        [<span class="str">"Java"</span>, <span class="str"
+                            >"C"</span
+                        >, <span class="str">"Python"</span>, <span class="str"
+                            >"Rust"</span
+                        >]<span class="punct">,</span>
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;<span class="key">"frameworks"</span><span
+                            class="punct">:</span
+                        >
+                        [<span class="str">"Flask"</span>, <span class="str"
+                            >"Spring"</span
+                        >]<span class="punct">,</span>
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;<span class="key">"tools"</span><span
+                            class="punct">:</span
+                        >
+                        [<span class="str">"Docker"</span>, <span class="str"
+                            >"Power BI"</span
+                        >, <span class="str">"Azure"</span>, <span class="str"
+                            >"Git"</span
+                        >]
+                    </li>
+                    <li><span class="punct">&#125;</span></li>
+                </ol>
+            </div>
         </div>
-      </div>
-      <div class="reveal">
-        <h3 class="skill-group-title">Frameworks</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Flask</span>
-          <span class="skill-tag">Spring</span>
-        </div>
-      </div>
-      <div class="reveal">
-        <h3 class="skill-group-title">Tools</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">Azure</span>
-          <span class="skill-tag">Git</span>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <style>
-  .section-inner {
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 4rem var(--space-lg);
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-2xl);
-  }
-  @media (min-width: 768px) {
-    .skills-grid {
-      grid-template-columns: repeat(3, 1fr);
+    .section-inner {
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 4rem var(--space-lg);
     }
-  }
 
-  .skill-group-title {
-    font-family: var(--font-sans);
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: var(--space-lg);
-  }
+    .code-card {
+        max-width: 44rem;
+        margin: 0 auto;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background-color: var(--bg-secondary);
+        overflow: hidden;
+    }
 
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-  }
+    .code-tab {
+        padding: var(--space-sm) var(--space-lg);
+        background-color: var(--bg-accent);
+        border-bottom: 1px solid var(--border);
+    }
 
-  .skill-tag {
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--text-secondary);
-    background-color: var(--bg-accent);
-    transition:
-      color 0.2s,
-      background-color 0.2s;
-    cursor: default;
-  }
-  .skill-tag:hover {
-    color: var(--accent);
-    background-color: color-mix(in srgb, var(--accent), transparent 90%);
-  }
+    .code-filename {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+    }
+
+    .code-body {
+        padding: var(--space-lg) var(--space-xl);
+        overflow-x: auto;
+    }
+
+    .code-lines {
+        list-style: none;
+        counter-reset: line;
+        font-family: var(--font-mono);
+        font-size: 0.875rem;
+        line-height: 1.9;
+        white-space: nowrap;
+    }
+
+    .code-lines li {
+        counter-increment: line;
+        padding-left: var(--space-xl);
+        position: relative;
+    }
+    .code-lines li::before {
+        content: counter(line);
+        position: absolute;
+        left: 0;
+        width: 1.5rem;
+        text-align: right;
+        color: var(--text-muted);
+        opacity: 0.5;
+    }
+
+    .key {
+        color: var(--accent);
+    }
+    .str {
+        color: var(--accent-green);
+    }
+    .punct {
+        color: var(--text-muted);
+    }
 </style>
