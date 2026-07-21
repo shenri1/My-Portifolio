@@ -1,12 +1,21 @@
+---
+const navLinks = [
+    { href: "/experience", label: "Experience" },
+    { href: "/skills", label: "Skills" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+];
+const currentPath = Astro.url.pathname;
+---
+
 <nav id="navbar">
     <div class="nav-inner">
         <a href="/" class="nav-logo">SH</a>
 
         <div class="nav-links nav-links-desktop">
-            <a href="/experience">Experience</a>
-            <a href="/skills">Skills</a>
-            <a href="/projects">Projects</a>
-            <a href="/contact">Contact</a>
+            {navLinks.map((link) => (
+                <a href={link.href} class:list={["nav-tab", { active: currentPath === link.href }]}>{link.label}</a>
+            ))}
 
             <div class="nav-controls">
                 <button id="themeToggle" aria-label="Toggle theme">
@@ -91,10 +100,9 @@
     </div>
 
     <div class="mobile-nav" id="mobileNav">
-        <a href="/experience" class="mobile-link">Experience</a>
-        <a href="/skills" class="mobile-link">Skills</a>
-        <a href="/projects" class="mobile-link">Projects</a>
-        <a href="/contact" class="mobile-link">Contact</a>
+        {navLinks.map((link) => (
+            <a href={link.href} class:list={["mobile-link", { active: currentPath === link.href }]}>{link.label}</a>
+        ))}
     </div>
 </nav>
 
@@ -136,7 +144,7 @@
     }
 
     .nav-logo {
-        font-family: var(--font-mono);
+        font-family: var(--font-display);
         font-size: 1.125rem;
         font-weight: 700;
         color: var(--accent);
@@ -145,21 +153,43 @@
 
     .nav-links {
         display: flex;
-        align-items: center;
-        gap: var(--space-xl);
+        align-items: stretch;
+        gap: var(--space-md);
+        height: 100%;
     }
 
-    .nav-links a {
+    .nav-tab {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0 var(--space-sm);
         font-family: var(--font-mono);
         font-size: 0.6875rem;
         font-weight: 500;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
         color: var(--text-secondary);
         transition: color 0.2s;
     }
-    .nav-links a:hover {
+    .nav-tab::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 2px;
+        background-color: var(--accent);
+        transform: scaleX(0);
+        transition: transform 0.2s ease;
+    }
+    .nav-tab:hover {
+        color: var(--text-primary);
+    }
+    .nav-tab.active {
         color: var(--accent);
+    }
+    .nav-tab.active::after {
+        transform: scaleX(1);
     }
 
     .nav-controls {
@@ -213,6 +243,9 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
         color: var(--text-secondary);
+    }
+    .mobile-nav a.active {
+        color: var(--accent);
     }
 
     @media (max-width: 768px) {

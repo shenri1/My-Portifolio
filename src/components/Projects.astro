@@ -8,24 +8,31 @@
                 rel="noopener noreferrer"
                 class="project-card reveal"
             >
-                <div class="project-title-row">
-                    <h3 class="project-title">GenQues</h3>
-                    <svg
-                        class="project-icon"
-                        viewBox="0 0 24 24"
-                        width="16"
-                        height="16"
-                    >
-                        <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                        ></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                <div class="project-thumb" style="background: color-mix(in srgb, var(--accent), transparent 88%);">
+                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="12" y1="18" x2="12" y2="12"/>
+                        <line x1="9" y1="15" x2="15" y2="15"/>
                     </svg>
                 </div>
-                <p class="project-desc">TCC Project.</p>
-                <div class="project-tags">
-                    <span class="project-tag">GitHub</span>
+                <div class="project-body">
+                    <div class="project-title-row">
+                        <h3 class="project-title">GenQues</h3>
+                        <svg class="project-icon" viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </div>
+                    <p class="project-desc">
+                        Final degree project: a system for generating and managing assessment questions using NLP.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">NLP</span>
+                    </div>
                 </div>
             </a>
 
@@ -35,26 +42,29 @@
                 rel="noopener noreferrer"
                 class="project-card reveal"
             >
-                <div class="project-title-row">
-                    <h3 class="project-title">ConsumidorGOV Scraper</h3>
-                    <svg
-                        class="project-icon"
-                        viewBox="0 0 24 24"
-                        width="16"
-                        height="16"
-                    >
-                        <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                        ></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                <div class="project-thumb" style="background: color-mix(in srgb, var(--accent-green), transparent 88%);">
+                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M8 11l3 3 5-5"/>
                     </svg>
                 </div>
-                <p class="project-desc">
-                    Scraper for ConsumidorGOV platform hosted on GitHub.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">GitHub</span>
+                <div class="project-body">
+                    <div class="project-title-row">
+                        <h3 class="project-title">ConsumidorGOV Scraper</h3>
+                        <svg class="project-icon" viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </div>
+                    <p class="project-desc">
+                        Automated data extraction pipeline for Brazil’s consumer protection platform with robust error handling.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Scrapy</span>
+                        <span class="project-tag">Data</span>
+                    </div>
                 </div>
             </a>
         </div>
@@ -63,15 +73,9 @@
 
 <style>
     .section-alt {
-        background-color: color-mix(
-            in srgb,
-            var(--bg-secondary) 50%,
-            transparent
-        );
-        border-top: 1px solid
-            color-mix(in srgb, var(--text-muted), transparent 92%);
-        border-bottom: 1px solid
-            color-mix(in srgb, var(--text-muted), transparent 92%);
+        background-color: color-mix(in srgb, var(--bg-secondary) 50%, transparent);
+        border-top: 1px solid color-mix(in srgb, var(--text-muted), transparent 92%);
+        border-bottom: 1px solid color-mix(in srgb, var(--text-muted), transparent 92%);
     }
 
     .section-inner {
@@ -83,8 +87,8 @@
     .projects-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: var(--space-lg);
-        max-width: 48rem;
+        gap: var(--space-xl);
+        max-width: 56rem;
         margin: 0 auto;
     }
     @media (min-width: 768px) {
@@ -96,17 +100,31 @@
     .project-card {
         display: flex;
         flex-direction: column;
-        padding: var(--space-lg);
         border: 1px solid var(--border);
-        border-radius: var(--radius-lg);
+        border-radius: var(--radius-xl);
         background-color: var(--bg-secondary);
-        transition:
-            border-color 0.3s,
-            box-shadow 0.3s;
+        overflow: hidden;
+        transition: border-color 0.2s, background-color 0.2s;
     }
     .project-card:hover {
-        border-color: color-mix(in srgb, var(--accent), transparent 50%);
-        box-shadow: 0 0 32px var(--accent-glow);
+        border-color: var(--accent);
+        background-color: color-mix(in srgb, var(--bg-accent), transparent 70%);
+    }
+
+    .project-thumb {
+        height: 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .project-body {
+        padding: var(--space-xl);
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 
     .project-title-row {
@@ -129,25 +147,26 @@
 
     .project-icon {
         color: var(--text-muted);
-        opacity: 0.4;
+        opacity: 0.35;
         transition: opacity 0.2s;
         flex-shrink: 0;
     }
     .project-card:hover .project-icon {
-        opacity: 1;
+        opacity: 0.85;
     }
 
     .project-desc {
         color: var(--text-secondary);
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.65;
         font-weight: 400;
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-xl);
     }
 
     .project-tags {
         display: flex;
-        gap: var(--space-md);
+        gap: var(--space-sm);
+        flex-wrap: wrap;
         margin-top: auto;
     }
 
@@ -155,8 +174,11 @@
         font-family: var(--font-mono);
         font-size: 0.6875rem;
         font-weight: 500;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
         color: var(--text-muted);
         text-transform: uppercase;
+        border: 1px solid color-mix(in srgb, var(--text-muted), transparent 70%);
+        border-radius: var(--radius-full);
+        padding: 0.2rem 0.6rem;
     }
 </style>

@@ -11,9 +11,22 @@ const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-  <Navbar />
-  <main transition:animate="slide">
-    <slot />
-  </main>
-  <Footer />
+  <div class="page-wrap">
+    <Navbar />
+    <main transition:animate="slide">
+      <slot />
+    </main>
+    <Footer />
+  </div>
 </Layout>
+
+<style is:global>
+  .page-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .page-wrap > main {
+    flex: 1 1 auto;
+  }
+</style>

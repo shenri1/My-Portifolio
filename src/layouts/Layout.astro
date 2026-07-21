@@ -16,7 +16,7 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -53,6 +53,7 @@ const { title } = Astro.props;
   :root {
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
     --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    --font-display: "Space Grotesk", var(--font-sans);
 
     /* Dark mode */
     --bg-base: #020617;
@@ -81,9 +82,9 @@ const { title } = Astro.props;
     /* Border radius */
     --radius-sm: 0.125rem;
     --radius: 0.25rem;
-    --radius-md: 0.375rem;
-    --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
+    --radius-md: 0.25rem;
+    --radius-lg: 0.3125rem;
+    --radius-xl: 0.375rem;
     --radius-full: 9999px;
   }
 
