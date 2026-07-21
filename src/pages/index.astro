@@ -1,22 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
+import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
-import Experience from '../components/Experience.astro';
-import Skills from '../components/Skills.astro';
-import Projects from '../components/Projects.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Silas Cerqueira — Portfolio">
-  <Navbar />
-  <main>
-    <Hero />
-    <Experience />
-    <Skills />
-    <Projects />
-    <Contact />
-  </main>
-  <Footer />
-</Layout>
+<PageLayout title="Silas Cerqueira — Portfolio">
+  <Hero />
+</PageLayout>

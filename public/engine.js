@@ -27,7 +27,7 @@ function toggleTheme() {
 
 applyTheme();
 
-document.addEventListener("DOMContentLoaded", () => {
+function initUI() {
   const themeToggle = document.getElementById("themeToggle");
   const mobileTheme = document.getElementById("mobileTheme");
 
@@ -62,6 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const navbar = document.getElementById("navbar");
   if (navbar) {
+    navbar.classList.toggle("scrolled", window.scrollY > 20);
+  }
+}
+
+function initScroll() {
+  const navbar = document.getElementById("navbar");
+  if (navbar) {
     window.addEventListener(
       "scroll",
       () => {
@@ -70,18 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
       { passive: true }
     );
   }
+}
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add("visible");
-          observer.unobserve(e.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { initUI(); initScroll(); });
+} else {
+  initUI();
+  initScroll();
+}
 
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-});
+document.addEventListener("astro:page-load", () => { initUI(); });
