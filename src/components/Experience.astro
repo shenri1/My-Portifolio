@@ -4,7 +4,7 @@
         <div class="exp-grid">
             <div class="reveal">
                 <h3 class="section-heading">Experience</h3>
-                <div>
+                <div class="exp-items-row">
                     <div class="exp-item">
                         <span class="exp-period"
                             >March 2025 &mdash; Present</span
@@ -12,120 +12,149 @@
                         <h4 class="exp-role">Data Intern</h4>
                         <p class="exp-company">Grupo Equatorial</p>
                         <p class="exp-desc">
-                            Refactored an internal web system for the legal
-                            department using clean architecture, improving
-                            maintainability and scalability.
+                            - Refactored an internal web system for the legal
+                            department, applying clean architecture principles
+                            to improve maintainability and scalability.
                         </p>
                         <p class="exp-desc">
-                            Developed interactive dashboards with Power BI to
+                            - Developed interactive dashboards with Power BI to
                             support data-driven decision making.
                         </p>
                         <p class="exp-desc">
-                            Created automated processes replacing manual
+                            - Created automated processes replacing manual
                             workflows, reducing delays and facilitating
                             corrections.
                         </p>
                     </div>
-                </div>
-            </div>
-
-            <div class="reveal">
-                <h3 class="section-heading">Education</h3>
-                <div>
                     <div class="exp-item">
-                        <span class="exp-period">2021 &mdash; 2027</span>
-                        <h4 class="exp-role">B.S. Computer Engineering</h4>
-                        <p class="exp-company">
-                            Universidade Estadual do Maranh&atilde;o
+                        <span class="exp-period">June 2026 &mdash; Present</span
+                        >
+                        <h4 class="exp-role">FullStack Engineer</h4>
+                        <p class="exp-company">Thera Softwarehouse</p>
+                        <p class="exp-desc">
+                            - Led the refactoring of a management web system for
+                            an Engineering company, migrating the stack from
+                            NextJS + Supabase to a more robust and mature
+                            architecture (SpringBoot + ReactJS + PostgreSQL).
                         </p>
+                        <p class="exp-desc">
+                            - Enhanced UI/UX and implemented a fully client-side
+                            PDF generation feature for analysis reports,
+                            offloading processing from the server and improving
+                            scalability.
+                        </p>
+                    </div>
+                </div>
+<br>
+</br>
+                <div class="reveal">
+                    <h3 class="section-heading">Education</h3>
+                    <div>
+                        <div class="exp-item">
+                            <span class="exp-period">2021 &mdash; 2027</span>
+                            <h4 class="exp-role">B.S. Computer Engineering</h4>
+                            <p class="exp-company">
+                                Universidade Estadual do Maranh&atilde;o
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<style>
-    .section-alt {
-        background-color: color-mix(
-            in srgb,
-            var(--bg-secondary) 50%,
-            transparent
-        );
-        border-top: 1px solid
-            color-mix(in srgb, var(--text-muted), transparent 92%);
-        border-bottom: 1px solid
-            color-mix(in srgb, var(--text-muted), transparent 92%);
-    }
-
-    .section-inner {
-        max-width: 75rem;
-        margin: 0 auto;
-        padding: 7rem var(--space-lg) 4rem;
-    }
-
-    .section-heading {
-        font-family: var(--font-display);
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-        color: var(--text-primary);
-        margin-bottom: var(--space-2xl);
-    }
-
-    .exp-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: var(--space-3xl);
-    }
-    @media (min-width: 1280px) {
-        .exp-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+    <style>
+        .section-alt {
+            background-color: color-mix(
+                in srgb,
+                var(--bg-secondary) 50%,
+                transparent
+            );
+            border-top: 1px solid
+                color-mix(in srgb, var(--text-muted), transparent 92%);
+            border-bottom: 1px solid
+                color-mix(in srgb, var(--text-muted), transparent 92%);
         }
-    }
 
-    .exp-item {
-        margin-bottom: var(--space-2xl);
-    }
-    .exp-item:last-child {
-        margin-bottom: 0;
-    }
+        .section-inner {
+            max-width: 75rem;
+            margin: 0 auto;
+            padding: 7rem var(--space-lg) 4rem;
+        }
 
-    .exp-period {
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        font-weight: 400;
-        color: var(--text-muted);
-        display: block;
-        margin-bottom: var(--space-sm);
-        letter-spacing: 0.05em;
-    }
+        .section-heading {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: var(--space-2xl);
+        }
 
-    .exp-role {
-        font-family: var(--font-sans);
-        font-size: 1.25rem;
-        font-weight: 600;
-        line-height: 1.4;
-        margin-bottom: var(--space-xs);
-    }
+        .exp-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-3xl);
+        }
+        @media (min-width: 1280px) {
+            .exp-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 6rem;
+            }
+        }
 
-    .exp-company {
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        font-weight: 500;
-        color: var(--accent);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: var(--space-md);
-    }
+        .exp-items-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+        }
+        @media (min-width: 640px) {
+            .exp-items-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
 
-    .exp-desc {
-        color: var(--text-secondary);
-        font-size: 1rem;
-        line-height: 1.6;
-        font-weight: 400;
-        max-width: 32rem;
-    }
-</style>
+        .exp-item {
+            min-width: 0;
+        }
+
+        .exp-period {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: var(--space-sm);
+            letter-spacing: 0.05em;
+        }
+
+        .exp-role {
+            font-family: var(--font-sans);
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: var(--space-xs);
+        }
+
+        .exp-company {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-md);
+        }
+
+        .exp-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 400;
+            max-width: 32rem;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    </style>
+</section>
